@@ -1,7 +1,7 @@
 
 function passwordIsValid() {
 
-   let password = 'Nothi1@';
+   let password = 'Nothilegugu123@';
 
    try {
       
@@ -10,7 +10,7 @@ function passwordIsValid() {
          throw('Password should exist!');
       }
 
-      if (password.length > 8) {
+      if (password.length > 9) {
          throw('Password should have more 8 chars!');
       }
 
@@ -42,7 +42,7 @@ function passwordIsValid() {
 
 function passwordIsOk() {
    
-   let password = '';
+   let password = 'Nothilegugu123@';
 
    if (password == '' && password.match(/[a-z]/) == null) {
       if (password.length > 8 || password.match(/[A-Z]/) == null || password.match(/[@,#,!,$,%,$,&,*]/) == null || password.match(/[0-9]/)== null) {
