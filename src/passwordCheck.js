@@ -1,43 +1,59 @@
-function passwordIsOk(password) {
-    try {
-        var charecters = /^(?=.*[0-9])/;
-        if(password.match(charecters) == null) throw("Password must have at least one digit");
-        
-        return password;
-    } catch (err) {
-        return err;
-    }
+
+function passwordIsValid() {
+
+   let password = 'Nothi1@';
+
+   try {
+      
+      // Trying conditions
+      if (password == '') {
+         throw('Password should exist!');
+      }
+
+      if (password.length > 8) {
+         throw('Password should have more 8 chars!');
+      }
+
+      if (password.match(/[a-z]/) == null) {
+         throw('Password should contain small letters!');
+      }
+
+      if (password.match(/[A-Z]/) == null) {
+         throw('Password should contain uppercase letters!');
+      }
+
+      if(password.match(/[0-9]/)== null) {
+         throw("password should contain digits");
+      }
+
+      if(password.match(/[@,#,!,$,%,$,&,*]/) == null) {
+         throw('password should have special charecters');
+      }
+
+      
+
+      
+
+   } catch(error) {
+      console.log(error);
+   }
+
 }
 
+function passwordIsOk() {
+   
+   let password = '';
 
-// function passwordIsOk(password) {
-//     try {
-//         var charecters = /^(?=.*[a-z])/;
-//         if(password.match(charecters) == null) throw("Password must have lowercase");
-        
-//         return password;
-//     } catch (err) {
-//         return err;
-//     }
-// }
+   if (password == '' && password.match(/[a-z]/) == null) {
+      if (password.length > 8 || password.match(/[A-Z]/) == null || password.match(/[@,#,!,$,%,$,&,*]/) == null || password.match(/[0-9]/)== null) {
+         return true;
+      }
+   }
 
-
-function specialcharecter(password) {
-    try {
-        var charecters = /^(?=.*[%,&.@,*.#,!,$])/;
-        if(password.match(charecters) == null) throw("Password must have at least one digit");
-        
-        return password;
-    } catch (err) {
-        return err;
-    }
+   return false;
 }
-// console.log(passwordIsOk('nsjdvsvd132'));
 
-
-    
 module.exports={
-    passwordIsOk,
-    specialcharecter
+   passwordIsValid,
+   passwordIsOk
 }
-    
