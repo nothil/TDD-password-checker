@@ -1,7 +1,7 @@
  
  
-let password = require('../src/passwordCheck');
-   var passwordtext = 'Nothilegugu789#'
+let passwordtext = require('../src/passwordCheck');
+   var password = 'Nothilegugu789#';
 describe('passwordIsOk', function () {
    it('password should exist', function () {
       expect(password).not.toBeNull();
@@ -18,7 +18,7 @@ describe('passwordIsOk', function () {
      });
 
      it('should have special charecter', function () {
-        expect(password.passwordtext).toMatch(/[%,&,@,*,#,!,$]/);
+        expect(password).toMatch(/[!@#\$%\^&=+-_,.;'"]/);
      });
 
 

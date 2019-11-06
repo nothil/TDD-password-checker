@@ -1,7 +1,7 @@
 
 function passwordIsValid() {
 
-   let password = 'Nothilegugu123@';
+   let password = 'Nothilegugu123';
 
    try {
       
@@ -10,7 +10,7 @@ function passwordIsValid() {
          throw('Password should exist!');
       }
 
-      if (password.length > 9) {
+      if (password.length <= 8) {
          throw('Password should have more 8 chars!');
       }
 
@@ -37,10 +37,14 @@ function passwordIsValid() {
    } catch(error) {
       console.log(error);
    }
-
+   return "pass word is valid";
 }
+    
+    console.log(passwordIsValid("password"));
 
-function passwordIsOk() {
+
+
+    function passwordIsOk() {
    
    let password = 'Nothilegugu123@';
 
@@ -52,6 +56,8 @@ function passwordIsOk() {
 
    return false;
 }
+
+
 
 module.exports={
    passwordIsValid,
