@@ -1,7 +1,9 @@
 
+let password = 'Nothilegugu123#';
+
 function passwordIsValid() {
 
-   let password = 'Nothilegugu123';
+   
 
    try {
       
@@ -37,7 +39,7 @@ function passwordIsValid() {
    } catch(error) {
       console.log(error);
    }
-   return "pass word is valid";
+   return "password is valid";
 }
     
     console.log(passwordIsValid("password"));
